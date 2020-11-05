@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs'; 
-import { character } from '../models/character';
+import { Character } from '../models/character';
 import { House } from '../models/house';
 import { HttpService } from './http.service';
 
 @Injectable()
 export class CharacterService {
-    private characters = new BehaviorSubject<Array<character>>(new Array<character>());
-    private characters$ = this.characters.asObservable();
+    public characters = new BehaviorSubject<Array<Character>>(new Array<Character>());
+    public characters$ = this.characters.asObservable();
 
     constructor (private httpServive: HttpService) {}
 
@@ -16,7 +16,6 @@ export class CharacterService {
             this.httpServive.Get('api/characters/house/' + house.name).subscribe((requesResult) => {
                 if(requesResult != null) {
                     this.characters.next(requesResult);
-                    console.log(this.characters);
                 }
                 else {
                     this.characters.next(null);

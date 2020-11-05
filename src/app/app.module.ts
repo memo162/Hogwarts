@@ -10,12 +10,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CharacterService } from './services/character.service';
 import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CharactersComponent } from './components/characters/characters.component.html/characters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HousesComponent
+    HousesComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,

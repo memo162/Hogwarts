@@ -1,6 +1,6 @@
-import { wand } from './wand';
+import { Wand } from './wand';
 
-export class character {
+export class Character {
     name: string;
     species: string;
     gender: string;
@@ -10,7 +10,7 @@ export class character {
     ancestry: string;
     eyeColour: string;
     hairColour: string;
-    wand: wand;
+    wand: Wand;
     patronus: string;
     hogwartsStudent: boolean;
     hogwartsStaff: boolean;
