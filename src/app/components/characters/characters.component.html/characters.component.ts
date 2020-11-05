@@ -3,7 +3,6 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Character } from 'src/app/models/character';
 import { CharacterService } from 'src/app/services/character.service';
-import { DatePipe } from '@angular/common'
 
 @Component({
     selector: 'app-characters',
@@ -17,7 +16,6 @@ export class CharactersComponent {
 
     constructor(
         private characterService: CharacterService,
-        public datepipe: DatePipe
     ) {}
 
     ngOnInit() {

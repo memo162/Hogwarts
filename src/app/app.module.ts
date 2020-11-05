@@ -14,6 +14,7 @@ import { CharactersComponent } from './components/characters/characters.componen
 import { DatePipe } from '@angular/common';
 import { CardComponent } from './components/common/card/card.component';
 import { StudentsComponent } from './components/students/students.component';
+import { StudentService } from './services/student.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { StudentsComponent } from './components/students/students.component';
   providers: [
     HouseService, 
     CharacterService,
+    StudentService,
     HttpService,
     DatePipe
   ],

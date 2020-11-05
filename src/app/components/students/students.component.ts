@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { combineAll } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { Character } from 'src/app/models/character';
+import { StudentService } from 'src/app/services/student.service';
 
 @Component({
     selector: 'app-students',
@@ -9,5 +11,23 @@ import { Character } from 'src/app/models/character';
 })
 
 export class StudentsComponent {
+    private unsubscribe: Subject<void> = new Subject();
     public students: Array<Character> = new Array<Character>();
+
+    constructor(
+        private studentService: StudentService,
+    ) {}
+
+    ngOnInit() {
+        this.studentService.students$.pipe(takeUntil(this.unsubscribe)).subscribe(result => {
+            this.students = result;
+        });
+
+        this.studentService.get();
+    }
+
+    ngOnDestroy() {
+        this.unsubscribe.next();
+        this.unsubscribe.complete();
+    }
 }
