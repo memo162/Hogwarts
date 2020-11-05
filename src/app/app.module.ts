@@ -16,7 +16,7 @@ import { CardComponent } from './components/common/card/card.component';
 import { StudentsComponent } from './components/students/students.component';
 import { StudentService } from './services/student.service';
 import { TeacherService } from './services/teacher.service';
-import { TeachersComponent } from './components/teachers/teacher.component';
+import { TeachersComponent } from './components/teachers/teachers.component';
 
 @NgModule({
   declarations: [
