@@ -1,4 +1,4 @@
-<div ngbDropdown class="d-inline-block">
+<div ngbDropdown class="d-inline-block houses-dropdown">
     <button class="btn btn-outline-primary" id="dropdownHouse" ngbDropdownToggle>{{ selectedHouse ? selectedHouse.name : '-- Select House --'}}</button>
     <div ngbDropdownMenu aria-labelledby="dropdownHouse">
         <button ngbDropdownItem *ngFor="let house of houses" (click)="selectHouse(house)">{{house.name}}</button>

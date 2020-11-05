@@ -11,6 +11,7 @@ import { CharacterService } from './services/character.service';
 import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './components/characters/characters.component.html/characters.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CharactersComponent } from './components/characters/characters.componen
     HouseService, 
     CharacterService,
     HttpService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

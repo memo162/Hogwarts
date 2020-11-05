@@ -6,7 +6,7 @@ export class Character {
     gender: string;
     house: string;
     dateOfBirth: string;
-    yearOfBirth: string;
+    yearOfBirth: number;
     ancestry: string;
     eyeColour: string;
     hairColour: string;
