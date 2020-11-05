@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 import { House } from '../models/house';
 
 @Injectable()
-export class HousesService {
+export class HouseService {
 
     get() {
         let houses = new Array<House>();

@@ -5,8 +5,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { HousesComponent } from './components/houses/houses.component';
-import { HousesService } from './services/houses.service';
+import { HouseService } from './services/house.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CharacterService } from './services/character.service';
+import { HttpService } from './services/http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,10 +19,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule
   ],
-  providers: [HousesService],
+  providers: [
+    HouseService, 
+    CharacterService,
+    HttpService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
