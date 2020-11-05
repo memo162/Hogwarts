@@ -10,3 +10,9 @@ hr {
     border-radius: 5px;
     margin-bottom: 20px;
 }
+
+.hogwarts-info-container {
+    background-color: #a0a0a0;
+    width: 100%;
+    padding-bottom: 4rem;
+}

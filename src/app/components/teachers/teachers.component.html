@@ -1,6 +1,19 @@
-<div *ngIf="teachers && teachers.length" class="container">
-    <h1>Teachers</h1>
-    <hr>
-    <app-card [characters]="teachers"></app-card>
+<div class="hogwarts-info-container mx-0">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4 col-8 mx-auto">
+                <img class="img-fluid mx-auto pt-5" src="../../../assets/images/logos/caldero.png" alt="selector hat">
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-7 text-center">
+                <div *ngIf="teachers && teachers.length" class="container">
+                    <h1>Teachers</h1>
+                    <hr>
+                    <app-card [characters]="teachers"></app-card>
+                </div>       
+            </div>
+        </div>
+     </div>
 </div>
  
