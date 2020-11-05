@@ -1,0 +1,29 @@
+.loading-layout {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    z-index: 1059;
+    overflow: hidden;
+}
+
+.spinner-border {
+    position: fixed;
+    top: 45%;
+    margin-left: -39px;
+    color: steelblue;
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.5rem;
+}
+
+.loading-icon-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}

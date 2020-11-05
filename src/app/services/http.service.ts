@@ -2,16 +2,20 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { catchError, retry, finalize } from 'rxjs/operators';
+import { LoadingService } from './loading.service';
 
 
 @Injectable()
 export class HttpService {
     httpHeaders: HttpHeaders;
 
-    constructor(private http: HttpClient) {
+    constructor(
+      private http: HttpClient,
+      private loadingService: LoadingService
+      ) {
         this.httpHeaders = new HttpHeaders({
-            'Content-Type':  'application/json'
-          });
+          'Content-Type':  'application/json'
+        });
     }
 
     private handleError(error: HttpErrorResponse) {
@@ -31,10 +35,12 @@ export class HttpService {
       }
 
     Get(url: string): Observable<any> {
+        this.loadingService.start();
         return this.http.get<any>(url, {headers: this.httpHeaders})
         .pipe(
             retry(2),
-            catchError(this.handleError)
+            catchError(this.handleError),
+            finalize(() => this.loadingService.stop())
         );
     }
 }

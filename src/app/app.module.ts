@@ -20,6 +20,8 @@ import { TeachersComponent } from './components/teachers/teachers.component';
 import { StudentFormComponent } from './components/students/studentForm/studentForm.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeButtonComponent } from './components/common/homeButton/homeButton.component';
+import { LoadingComponent } from './components/common/loading/loading.component';
+import { LoadingService } from './services/loading.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { HomeButtonComponent } from './components/common/homeButton/homeButton.c
     StudentsComponent,
     TeachersComponent,
     StudentFormComponent,
-    HomeButtonComponent
+    HomeButtonComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { HomeButtonComponent } from './components/common/homeButton/homeButton.c
     CharacterService,
     StudentService,
     TeacherService,
+    LoadingService,
     HttpService
   ],
   bootstrap: [AppComponent]
