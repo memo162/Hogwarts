@@ -10,11 +10,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CharacterService } from './services/character.service';
 import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CharactersComponent } from './components/characters/characters.component.html/characters.component';
+import { CharactersComponent } from './components/characters/characters.component';
 import { DatePipe } from '@angular/common';
 import { CardComponent } from './components/common/card/card.component';
 import { StudentsComponent } from './components/students/students.component';
 import { StudentService } from './services/student.service';
+import { TeacherService } from './services/teacher.service';
+import { TeachersComponent } from './components/teachers/teacher.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { StudentService } from './services/student.service';
     HousesComponent,
     CharactersComponent,
     CardComponent,
-    StudentsComponent
+    StudentsComponent,
+    TeachersComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { StudentService } from './services/student.service';
     HouseService, 
     CharacterService,
     StudentService,
+    TeacherService,
     HttpService,
     DatePipe
   ],
