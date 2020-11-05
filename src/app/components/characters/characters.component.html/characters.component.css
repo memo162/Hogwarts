@@ -3,28 +3,6 @@ h1 {
     padding-bottom: 1.5rem;
 }
 
-.character-card {
-    background-color: white;
-    width: 100%;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.character-card img {
-    max-width: 150px;
-    max-height: 150px;
-}
-
-.character-card-image {
-    width: 100px;
-    height: 100px;
-    background-color: gray;
-    border-radius: 50%;
-    background-size: cover;
-}
-
 hr {    
     margin-top: -17px;
     width: 80%;

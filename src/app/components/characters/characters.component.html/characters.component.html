@@ -1,17 +1,6 @@
 <div *ngIf="characters && characters.length" class="container">
     <h1>Characters</h1>
     <hr>
-    <div class="character-card row mx-0" *ngFor="let character of characters">
-        <div class="col-md-3">
-            <div class="character-card-image mx-auto" [ngStyle]="{ 'background-image': 'url(' + character.image + ')'}">
-        </div>  
-        </div>
-        <div class="col-md-7 text-md-left text-center">
-            <h3>{{character.name}}</h3>
-            <span><b>Patronus:</b> {{character.patronus}}</span>
-            <br>    
-            <span><b>Age: </b>{{getAge(character)}}</span>
-        </div>
-    </div>
+    <app-card [characters]="characters"></app-card>
 </div>
  

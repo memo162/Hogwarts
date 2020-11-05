@@ -12,13 +12,17 @@ import { HttpService } from './services/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './components/characters/characters.component.html/characters.component';
 import { DatePipe } from '@angular/common';
+import { CardComponent } from './components/common/card/card.component';
+import { StudentsComponent } from './components/students/students.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HousesComponent,
-    CharactersComponent
+    CharactersComponent,
+    CardComponent,
+    StudentsComponent
   ],
   imports: [
     BrowserModule,

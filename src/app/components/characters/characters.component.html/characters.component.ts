@@ -30,14 +30,4 @@ export class CharactersComponent {
         this.unsubscribe.next();
         this.unsubscribe.complete();
     }
-
-    getAge(character: Character) {
-        let currentYear = new Date().getFullYear();
-
-        if(character.yearOfBirth != null && character.yearOfBirth > 0) {
-            return currentYear - character.yearOfBirth;
-        }
-
-        return;
-    }
 }
