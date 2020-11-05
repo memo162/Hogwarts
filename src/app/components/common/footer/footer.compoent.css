@@ -1,0 +1,23 @@
+.footer-container {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1rem 1rem 2rem 1rem;
+}
+
+.footer-end {
+    text-align: center;
+    color: gray;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #232323;
+}
+
+.site-map { 
+    margin-bottom: 1rem;
+}
+
+.site-map a {
+    display: block;
+    padding-left: 8px;
+}

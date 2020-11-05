@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HomeButtonComponent } from './components/common/homeButton/homeButton.component';
 import { LoadingComponent } from './components/common/loading/loading.component';
 import { LoadingService } from './services/loading.service';
+import { FooterComponent } from './components/common/footer/footer.compoent';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoadingService } from './services/loading.service';
     TeachersComponent,
     StudentFormComponent,
     HomeButtonComponent,
-    LoadingComponent
+    LoadingComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
