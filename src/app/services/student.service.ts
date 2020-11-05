@@ -20,4 +20,9 @@ export class StudentService {
             }
         });
     }
+
+    add(newStudent: Character) {
+        this.students.value.unshift(newStudent);
+        this.students.next(this.students.value);
+    }
 }

@@ -17,6 +17,9 @@ import { StudentsComponent } from './components/students/students.component';
 import { StudentService } from './services/student.service';
 import { TeacherService } from './services/teacher.service';
 import { TeachersComponent } from './components/teachers/teachers.component';
+import { StudentFormComponent } from './components/students/studentForm/studentForm.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeButtonComponent } from './components/common/homeButton/homeButton.component';
 
 @NgModule({
   declarations: [
@@ -26,21 +29,23 @@ import { TeachersComponent } from './components/teachers/teachers.component';
     CharactersComponent,
     CardComponent,
     StudentsComponent,
-    TeachersComponent
+    TeachersComponent,
+    StudentFormComponent,
+    HomeButtonComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [
     HouseService, 
     CharacterService,
     StudentService,
     TeacherService,
-    HttpService,
-    DatePipe
+    HttpService
   ],
   bootstrap: [AppComponent]
 })

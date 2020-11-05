@@ -1,7 +1,7 @@
 <div class="hogwarts-info-container mx-0">
     <div class="container">
         <div class="row justify-content-md-center">
-            <div class="col-md-4 col-8 mx-auto">
+            <div class="mx-auto" [ngClass]="{ 'col-md-2 col-4': characters && characters.length, 'col-md-4 col-8': !(characters && characters.length)}">
                 <img class="img-fluid mx-auto pt-5 pb-5" src="../../../assets/images/logos/Colour_Sorting_Hat.png" alt="selector hat">
             </div>
         </div>

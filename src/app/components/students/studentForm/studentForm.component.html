@@ -1,0 +1,42 @@
+<form [formGroup]="studentForm" (ngSubmit)="saveStudent()">
+    <div class="form-group">
+      <label for="name"><b>Name:</b>*</label>
+      <input 
+        type="text" 
+        formControlName="name" 
+        maxlength="50" 
+        class="form-control" 
+        [ngClass]="{'invalid': f.name.dirty && f.name.touched && f.name.errors}" 
+        id="name" 
+        placeholder="Enter new student name">
+    </div>
+
+    <div class="form-group">
+      <label for="patronus"><b>Patronus:</b>*</label>
+      <input 
+        type="text" 
+        formControlName="patronus" 
+        maxlength="50" 
+        class="form-control" 
+        id="patronus" 
+        [ngClass]="{'invalid': f.patronus.dirty && f.patronus.touched && f.patronus.errors}" 
+        placeholder="Enter new student patronus">
+    </div>
+
+    <div class="form-group">
+      <label for="yearOfBirth"><b>Year Of Birth:</b>*</label>
+      <input 
+        type="text" 
+        formControlName="yearOfBirth" 
+        maxlength="4" 
+        class="form-control" 
+        id="yearOfBirth"  
+        [ngClass]="{'invalid': f.yearOfBirth.dirty && f.yearOfBirth.touched && f.yearOfBirth.errors}" 
+        placeholder="Enter new student year of birth">
+    </div>
+    <span><i>All * field are required</i></span>
+    <div class="text-center mt-4">
+        <button type="button" (click)="cancel()" class="btn btn-outline-secondary px-5 mx-1">Cancel</button>
+        <button [disabled]="!studentForm.valid" type="submit" class="btn btn-primary px-5 mx-1">Save</button>
+    </div>
+</form>

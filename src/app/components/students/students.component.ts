@@ -13,6 +13,7 @@ import { StudentService } from 'src/app/services/student.service';
 export class StudentsComponent {
     private unsubscribe: Subject<void> = new Subject();
     public students: Array<Character> = new Array<Character>();
+    public showStudentform: boolean = false;
 
     constructor(
         private studentService: StudentService,
@@ -29,5 +30,13 @@ export class StudentsComponent {
     ngOnDestroy() {
         this.unsubscribe.next();
         this.unsubscribe.complete();
+    }
+
+    showAddForm() {
+        this.showStudentform = true;
+    }
+
+    close() {
+        this.showStudentform = false;
     }
 }
